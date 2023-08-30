@@ -1,0 +1,25 @@
+// Styling for the search box
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 0px;
+  // background-color: white;
+}
+
+.books {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.book {
+  border: 2px solid #ccc;
+  padding: 15px;
+
+  &:hover {
+    background-color: #ffffff;
+  }
+}

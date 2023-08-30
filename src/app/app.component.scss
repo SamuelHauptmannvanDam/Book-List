@@ -1,0 +1,27 @@
+// Styling for the nav menu
+nav {
+  background-color: #333;
+  color: white;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    li {
+      float: left;
+
+      a {
+        display: block;
+        padding: 14px 20px;
+        text-decoration: none;
+        color: white;
+
+        &:hover {
+          background-color: #111;
+        }
+      }
+    }
+  }
+}

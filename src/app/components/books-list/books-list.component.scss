@@ -1,0 +1,17 @@
+// Styling for the list of books with routerLinks
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    padding: 10px 20px;
+    margin: 5px 0;
+    border: 2px solid #ccc;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #ffffff;
+    }
+  }
+}

@@ -33,7 +33,12 @@ export class LandingPageComponent {
           book.title.toLowerCase().includes(this.searchTerm.toLowerCase())
         );
     } else {
-      this.latestBooks = this.bookService.getBooks().slice(0, 3);
+      this.latestBooks = this.bookService
+        .getBooks()
+        .slice(
+          this.bookService.getBooks().length - 3,
+          this.bookService.getBooks().length
+        );
     }
     this.router.navigate([], { queryParams: { search: this.searchTerm } });
   }

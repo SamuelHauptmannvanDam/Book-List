@@ -1,0 +1,16 @@
+// Styling for the detailed view of a single book
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  color: #333;
+}
+
+p {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  color: #666;
+
+  &:nth-child(2) {
+    font-weight: bold; // Making the author name bold
+  }
+}
