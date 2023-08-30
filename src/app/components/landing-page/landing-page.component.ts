@@ -27,11 +27,14 @@ export class LandingPageComponent {
 
   search() {
     if (this.searchTerm) {
-      this.latestBooks = this.bookService
-        .getBooks()
-        .filter((book) =>
-          book.title.toLowerCase().includes(this.searchTerm.toLowerCase())
+      const lowerCaseSearchTerm = this.searchTerm.toLowerCase();
+      this.latestBooks = this.bookService.getBooks().filter((book) => {
+        return (
+          book.title.toLowerCase().includes(lowerCaseSearchTerm) ||
+          book.author.toLowerCase().includes(lowerCaseSearchTerm) ||
+          book.description.toLowerCase().includes(lowerCaseSearchTerm)
         );
+      });
     } else {
       this.latestBooks = this.bookService
         .getBooks()
